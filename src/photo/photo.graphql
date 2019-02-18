@@ -1,0 +1,25 @@
+type Photo {
+    id: Int!
+    name: String
+    description: String
+    filename: String
+    views: Int
+    isPublished: Boolean
+}
+
+type Mutation {
+    CreatePhoto(CreatePhotoInput: CreatePhotoInput): Photo
+    UpdatePhoto(PhotoId: Int!): Photo
+}
+
+type Query {
+    photo(id: Int!): Photo
+}
+
+input CreatePhotoInput {
+    name: String
+    description: String
+    filename: String
+    views: Int
+    isPublished: Boolean
+}
