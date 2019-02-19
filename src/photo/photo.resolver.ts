@@ -8,18 +8,28 @@ export class photoResolver {
     ) { }
 
     @Query()
-    async photo(@Args('id') id: number){
-        return await this.photoService.fingOneByid(id);
+    async show(@Args('id') id: number){
+        return await this.photoService.show(id);
     };
 
-    @Mutation('CreatePhoto')
-    async createPhoto(@Args('CreatePhotoInput') Args: Photo) : Promise<Photo> {
-        return await this.photoService.createPhoto(Args);
+    @Query()
+    async delete(@Args('id') id: number){
+        return await this.photoService.delete(id);
     };
 
-    @Mutation('UpdatePhoto')
-    async UpdatePhoto(@Args('id') id: Number) : Promise<Photo> {
-        return await this.photoService.createPhoto(Args);
+    @Query()
+    async showAll(){
+        return await this.photoService.findAll();
+    };
+
+    @Mutation('create')
+    async create(@Args('dateCreate') Args: Photo) : Promise<Photo> {
+        return await this.photoService.create(Args);
+    };
+
+    @Mutation('update')
+    async update(@Args('dateUpdate') Args: Photo) : Promise<Photo> {
+        return await this.photoService.update(Args);
     }
 
 }
