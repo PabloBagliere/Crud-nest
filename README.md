@@ -11,6 +11,8 @@ The technologies used are the following:
 - [Graphql] : used to respond to requests
 - [Graphql-Apollo]: clarification is used because nest.js uses it internally
 
+clarification I am not an expert in these technologies and I am learning these technogies
+
 [Nest.js]: <https://github.com/nestjs/nest>
 [Typeorm]: <https://github.com/typeorm/typeorm>
 [Graphql]: <https://graphql.org/>
