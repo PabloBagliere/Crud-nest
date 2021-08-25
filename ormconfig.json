@@ -2,9 +2,9 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "postgres",
-    "password": "12345",
-    "database": "preuba",
+    "username": "pablo",
+    "password": "1234pablo",
+    "database": "prueba",
     "entities": ["src/**/**.entity{.ts,.js}"],
     "synchronize": true
   }

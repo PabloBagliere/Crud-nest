@@ -1,4 +1,12 @@
+
+/*
+ * -------------------------------------------------------
+ * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+ * -------------------------------------------------------
+ */
+
 /* tslint:disable */
+/* eslint-disable */
 export class CreateInput {
     name: string;
     description: string;
@@ -9,34 +17,34 @@ export class CreateInput {
 
 export class UpdateInput {
     id: number;
-    name?: string;
-    description?: string;
-    filename?: string;
-    views?: number;
-    isPublished?: boolean;
+    name?: Nullable<string>;
+    description?: Nullable<string>;
+    filename?: Nullable<string>;
+    views?: Nullable<number>;
+    isPublished?: Nullable<boolean>;
 }
 
 export abstract class IMutation {
-    abstract create(dateCreate: createInput): Photo | Promise<Photo>;
+    abstract create(dateCreate: createInput): Nullable<Photo> | Promise<Nullable<Photo>>;
 
-    abstract update(dateUpdate: updateInput): Photo | Promise<Photo>;
+    abstract update(dateUpdate: updateInput): Nullable<Photo> | Promise<Nullable<Photo>>;
 }
 
 export class Photo {
-    id?: number;
-    name?: string;
-    description?: string;
-    filename?: string;
-    views?: number;
-    isPublished?: boolean;
+    id?: Nullable<number>;
+    name?: Nullable<string>;
+    description?: Nullable<string>;
+    filename?: Nullable<string>;
+    views?: Nullable<number>;
+    isPublished?: Nullable<boolean>;
 }
 
 export abstract class IQuery {
-    abstract show(id: number): Photo | Promise<Photo>;
+    abstract show(id: number): Nullable<Photo> | Promise<Nullable<Photo>>;
 
-    abstract delete(id: number): Photo | Promise<Photo>;
+    abstract delete(id: number): Nullable<Photo> | Promise<Nullable<Photo>>;
 
-    abstract showAll(): Photo[] | Promise<Photo[]>;
-
-    abstract temp__(): boolean | Promise<boolean>;
+    abstract showAll(): Nullable<Nullable<Photo>[]> | Promise<Nullable<Nullable<Photo>[]>>;
 }
+
+type Nullable<T> = T | null;
